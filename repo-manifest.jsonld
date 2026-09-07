@@ -243,8 +243,9 @@
     {
       "@id": "https://repolex.ai/r/tower-rs/tower-http/commit/8c450c637430c4d589a07c46ba5ea2ce4b435aeb",
       "git:hexsha": "8c450c637430c4d589a07c46ba5ea2ce4b435aeb",
-      "repolex:parseStatus": "pending",
-      "git:tagName": "v0.1.0"
+      "repolex:parseStatus": "parsed",
+      "git:tagName": "v0.1.0",
+      "repolex:parsedAt": "2026-09-07T13:59:32.665915+00:00"
     }
   ]
 }
