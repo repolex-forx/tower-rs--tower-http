@@ -1,0 +1,17 @@
+[2026-09-07T14:26:13Z] === ENRICH ITERATION 1 START | repo=tower-rs/tower-http sha=8c450c63 ===
+[2026-09-07T14:26:13Z] [iter=1] PHASE START: enrich repo=tower-rs/tower-http sha=8c450c63 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/8c450c63-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/8c450c637430c4d589a07c46ba5ea2ce4b435aeb.nq.gz
+[2026-09-07T14:26:13Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=77 MB
+[2026-09-07T14:26:15Z] [iter=1] AST store loaded triples=22100 load_secs=2 mem_mb=117 MB
+[2026-09-07T14:26:15Z] [iter=1] Step 2: Finding LSP targets mem_mb=117 MB
+[2026-09-07T14:26:15Z] [iter=1] LSP targets found call_sites=140 imports=0 extends=0 implements=17 secs=0
+[2026-09-07T14:26:15Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=117 MB
+[2026-09-07T14:26:15Z] [iter=1] Position index built positions=1540 nodes_with_types=1815 secs=0 mem_mb=117 MB
+[2026-09-07T14:26:15Z] [iter=1] Step 3: Starting LSP resolution mem_mb=117 MB already_completed_types=[] already_completed_files=0
+[2026-09-07T14:26:15Z] [iter=1] Resolving target type target_type=call_site count=140
+[2026-09-07T14:26:41Z] [iter=1] Target type resolved target_type=call_site resolved=91 errors=32 secs=26 mem_mb=117 MB
+[2026-09-07T14:26:41Z] [iter=1] Resolving target type target_type=implements_clause count=17
+[2026-09-07T14:26:48Z] [iter=1] HEARTBEAT target_type=implements_clause elapsed_min=0.6 files_done=1 resolved=2 errors=0 current=tower-http-util/src/service/mod.rs
+[2026-09-07T14:26:48Z] [iter=1] Target type resolved target_type=implements_clause resolved=17 errors=0 secs=7 mem_mb=117 MB
+[2026-09-07T14:26:56Z] [iter=1] Step 5: Writing final enrichment file triples=1715
+[2026-09-07T14:26:56Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/8c450c637430c4d589a07c46ba5ea2ce4b435aeb.nq.gz size_kb=26
+[2026-09-07T14:26:56Z] [iter=1] PHASE END: enrich elapsed_s=43 elapsed_min=0.7 total_triples=1715
