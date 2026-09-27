@@ -585,7 +585,12 @@
           "source": "lsp",
           "install_path": "/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tonic-prost-build-0.14.6/src/lib.rs"
         }
-      ]
+      ],
+      "ast": [
+        "aggregate/ast/1d082ef7bdb6d80a2964698804a46c338b4c6a99/chunk-001.nq.gz"
+      ],
+      "repolex": "aggregate/repolex/1d082ef7bdb6d80a2964698804a46c338b4c6a99/chunk-001.nq.gz",
+      "dep": "dep/1d082ef7bdb6d80a2964698804a46c338b4c6a99.nq.gz"
     },
     {
       "commit": "8c450c637430c4d589a07c46ba5ea2ce4b435aeb",
