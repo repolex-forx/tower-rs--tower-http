@@ -1,5 +1,16 @@
 {
   "org": "tower-rs",
   "repo": "tower-http",
-  "versions": []
+  "versions": [
+    {
+      "commit": "1d082ef7bdb6d80a2964698804a46c338b4c6a99",
+      "tag": "tower-http-0.6.11",
+      "parsed_at": "2026-09-27T07:04:49.799740+00:00"
+    },
+    {
+      "commit": "8c450c637430c4d589a07c46ba5ea2ce4b435aeb",
+      "tag": "v0.1.0",
+      "parsed_at": "2026-09-07T13:59:32.665736+00:00"
+    }
+  ]
 }

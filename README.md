@@ -6,29 +6,27 @@ RDF knowledge graph data for [tower-rs/tower-http](https://github.com/tower-rs/t
 
 ## How to use this data
 
-The easiest way to get started is to install the [lexq](https://github.com/repolex-ai/lexq) query tool using [uv](https://docs.astral.sh/uv/getting-started/installation/).
-
-If you have uv installed, just copy/paste this into your terminal:
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
 
 ```bash
-uv tool install git+https://github.com/repolex-ai/lexq
+cargo install --git https://github.com/repolex-ai/rlex
 ```
 
-This installs lexq onto your system, in your user context. Verify the install:
+Verify the install:
 
 ```bash
-lexq --help
+rlex --help
 ```
 
-**lexq is designed to be used primarily by LLMs in a terminal.** Start up your favorite LLM and ask it to use the lexq tool. It's that easy!
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
 
 To load this repo's data:
 
 ```bash
-lexq download tower-rs/tower-http
+rlex download tower-rs/tower-http
 ```
 
-This will automatically download essential data files from the last parsed commit. Consult `lexq --moreinfo` for other options, including downloading multiple commits, blobs, etc.
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
 
 ## Data structure
 
@@ -43,8 +41,11 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 │   │   └── 8c450c637430c4d589a07c46ba5ea2ce4b435aeb
 │   │       └── chunk-001.nq.gz
 │   ├── lsp
+│   │   ├── 1d082ef7bdb6d80a2964698804a46c338b4c6a99.nq.gz
 │   │   └── 8c450c637430c4d589a07c46ba5ea2ce4b435aeb.nq.gz
 │   └── repolex
+│       ├── 1d082ef7bdb6d80a2964698804a46c338b4c6a99
+│       │   └── chunk-001.nq.gz
 │       └── 8c450c637430c4d589a07c46ba5ea2ce4b435aeb
 │           └── chunk-001.nq.gz
 ├── blob
@@ -222,6 +223,7 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 ├── commit
 │   └── commit.nq.gz
 ├── dep
+│   ├── 1d082ef7bdb6d80a2964698804a46c338b4c6a99.nq.gz
 │   └── 8c450c637430c4d589a07c46ba5ea2ce4b435aeb.nq.gz
 ├── filetree
 │   ├── 1d082ef7bdb6d80a2964698804a46c338b4c6a99.nq.gz
@@ -233,7 +235,7 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 └── tag
     └── tag.nq.gz
 
-16 directories, 181 files
+17 directories, 184 files
 ```
 
 | Directory | What it contains |
@@ -247,10 +249,11 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 | `branch/` | Branch metadata. |
 | `tag/` | Tag metadata. |
 | `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
 
 ## Source repository
 
 [tower-rs/tower-http](https://github.com/tower-rs/tower-http)
 
 ---
-*Parsed on 2026-09-07 by [repolex](https://repolex.ai)*
+*Parsed on 2026-09-27 by [repolex](https://repolex.ai)*
